@@ -1,0 +1,8 @@
+/* Custom font face */
+@font-face {
+    font-family: 'Vindicator';
+    src: url('../assets/fonts/vindicator.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Optional: Controls how fonts load */
+  }

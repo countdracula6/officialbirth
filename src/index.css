@@ -20,3 +20,39 @@ button {
   padding: 8px 15px;
   cursor: pointer;
 }
+/* Import Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+  /* Font families */
+  --font-display: 'Vindicator', Impact, sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* Logo/headline styles */
+.band-logo {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 4rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #00ff00; /* Cyberpunk effect */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Header height */
+}
+
+body {
+  padding-top: 80px; /* Prevents content hiding behind fixed header */
+}

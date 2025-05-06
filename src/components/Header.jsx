@@ -1,12 +1,25 @@
+import { useState } from 'react';
+
 export default function Header() {
-    return (
-      <header>
-        <h1>BIRTHOFMACHINES</h1>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/shows">Shows</a>
-          <a href="/music">Music</a>
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="header-glitch">
+      <div className="header-container">
+        {/* ... logo ... */}
+        
+        <button 
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
+
+        <nav className={`cybernav ${menuOpen ? 'active' : ''}`}>
+          {/* ... nav links ... */}
         </nav>
-      </header>
-    )
-  }
+      </div>
+    </header>
+  )
+}
